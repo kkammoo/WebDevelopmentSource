@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+.slide-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.burgur {
+  right: 15px;
+  top: 23px;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #000000;
+}
+.burgur .top-line {
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  bottom: -5px;
+  content: '';
+  position: absolute;
+  right: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.burgur .bot-line {
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  top: -5px;
+  content: '';
+  position: absolute;
+  right: 0;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.burgur.on {
+  width: 0;
+}
+.burgur.on .bot-line {
+  -webkit-transform: translateY(5px) rotate(135deg);
+  transform: translateY(5px) rotate(135deg);
+}
+.burgur.on .top-line {
+  -webkit-transform: translateY(-5px) rotate(-135deg);
+  transform: translateY(-5px) rotate(-135deg);
+}
